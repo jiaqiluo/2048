@@ -1,0 +1,173 @@
+/*
+CS410P Project
+Jiaqi Luo
+*/
+
+/* -----------------------------------------------------
+ the template for button's animation is from
+ https://www.w3schools.com/css/css3_buttons.asp
+ */
+
+.button {
+    position: absolute;
+    top: 95px;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 180px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    left: 1px;
+}
+
+.button:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+/*--------------------------------------------------*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #faf8ef;
+    color: #776e65;
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+}
+
+body {
+    margin: 20px;
+}
+
+.container {
+    position: relative;
+    width: 500px;
+    height: 700px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.heading {
+    margin-bottom: 10px;
+}
+
+h1.title {
+    font-size: 80px;
+    font-weight: bold;
+    margin: 0;
+    display: block;
+    float: left;
+}
+
+/* -----------------------------------------------------
+ the css for score-container and best-container are from
+ http://2048game.com/
+ */
+
+.scores-container {
+    float: right;
+    text-align: right;
+}
+
+.score-container, .best-container {
+    position: relative;
+    display: inline-block;
+    background: #bbada0;
+    padding: 15px 25px;
+    font-size: 25px;
+    height: 30px;
+    width: 30px;
+    line-height: 47px;
+    font-weight: bold;
+    border-radius: 10px;
+    color: white;
+    margin-top: 15px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.score-container:after, .best-container:after {
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    left: 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: center;
+    color: #eee4da;
+}
+
+.score-container:after {
+    content: "Score";
+}
+
+.best-container:after {
+    content: "Best";
+}
+
+/*--------------------------------------------------*/
+
+.start {
+    position: absolute;
+}
+
+.grid-container {
+    position: absolute;
+    top: 180px;
+}
+
+table {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-color: #ccc0b3;
+    border-radius: 50px;
+    margin: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+td p {
+    position: absolute;
+    margin: 0px;
+    height: 80px;
+    width: 100px;
+    font-size: 50px;
+    font-weight: bold;
+    border-radius: 50px;
+    align-self: center;
+    padding-top: 20px;
+}
