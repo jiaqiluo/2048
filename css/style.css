@@ -3,6 +3,7 @@ CS410P Project
 Jiaqi Luo
 */
 
+
 /* -----------------------------------------------------
  the template for button's animation is from
  https://www.w3schools.com/css/css3_buttons.asp
@@ -47,9 +48,12 @@ Jiaqi Luo
     transition: 0s
 }
 
+
+
 /*--------------------------------------------------*/
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     background: #faf8ef;
@@ -64,14 +68,15 @@ body {
 
 .container {
     position: relative;
-    width: 500px;
+    width: 800px;
     height: 700px;
     margin: 0 auto;
     border: 1px solid black;
 }
 
 .heading {
-    margin-bottom: 10px;
+    width: 100%;
+    display: inline-block;
 }
 
 h1.title {
@@ -82,6 +87,8 @@ h1.title {
     float: left;
 }
 
+
+
 /* -----------------------------------------------------
  the css for score-container and best-container are from
  http://2048game.com/
@@ -89,18 +96,19 @@ h1.title {
 
 .scores-container {
     float: right;
-    text-align: right;
+    width: 37.5%;
 }
 
-.score-container, .best-container {
+.score-container,
+.best-container {
     position: relative;
     display: inline-block;
     background: #bbada0;
     padding: 15px 25px;
-    font-size: 25px;
-    height: 30px;
-    width: 30px;
-    line-height: 47px;
+    font-size: 35px;
+    height: 45px;
+    width: 75px;
+    line-height: 55px;
     font-weight: bold;
     border-radius: 10px;
     color: white;
@@ -109,7 +117,8 @@ h1.title {
     text-align: center;
 }
 
-.score-container:after, .best-container:after {
+.score-container:after,
+.best-container:after {
     position: absolute;
     width: 100%;
     top: 10px;
@@ -129,15 +138,20 @@ h1.title {
     content: "Best";
 }
 
-/*--------------------------------------------------*/
 
-.start {
-    position: absolute;
-}
+
+/*--------------------------------------------------*/
 
 .grid-container {
     position: absolute;
     top: 180px;
+    display: inline-block;
+    width: 100%;
+}
+
+.user_list {
+    float: right;
+    width: 37.5%;
 }
 
 table {
@@ -147,6 +161,11 @@ table {
     margin: 0 auto;
     border-radius: 10px;
     overflow: hidden;
+}
+
+.board {
+    float: left;
+    width: 62.5%;
 }
 
 td {
